@@ -11,3 +11,413 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* my code */
+html {
+  scroll-behavior: smooth;
+}
+:root{
+  --mian-color: #39FF14;
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color: black;
+}
+
+header{
+  background-color: rgba(4, 4, 11, 0.914);
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+header .left{
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: .7px;
+}
+header .right ul{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+header .right ul li{
+  list-style: none;
+}
+header .right ul li a{
+  color: white;
+  text-decoration: none;
+  transition: .3s;
+  font-weight: 500;
+
+}
+header .right ul li a:hover{
+  color: var(--mian-color);
+}
+
+@media (max-width: 767px) {
+  header .right{
+    display: none;
+  }
+  header .left{
+    letter-spacing: 1px;
+    color: var(--mian-color);
+  }
+}
+
+/* Start Landing Area */
+.landing-area{
+  background-image: url(../public/photo-1603665409265-bdc00027c217.jpg);
+  width: 100%;
+  background-size: cover;
+  padding-top: 80px;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+.landing-area::before{
+  content: "";
+  
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.667);
+  z-index: 2;
+}
+.landing-area .content{
+  position: relative;
+  z-index: 33;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  flex-direction: column;
+}
+.landing-area .content h2{
+  color: white;
+  font-size: 79px;
+  text-align: center;
+  font-weight: bolder;
+  letter-spacing: 3px;
+}
+.landing-area .content h2 span{
+  color: var(--mian-color);
+}
+.landing-area .content p{
+  color: #eeeeeecf;
+  margin-top: -15px;
+  font-weight: 700;
+  font-size: 17px;
+}
+.landing-area .content button{
+  display: block;
+  margin-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  font-weight: bold;
+  font-size: 22px;
+  border: none;
+  background-color: var(--mian-color);
+  color: #1e1e1e;
+  transition: .3s;
+  cursor: pointer;
+}
+.landing-area .content button:hover{
+  transform: scale(1.2);
+  background-color: rgb(62, 162, 62)
+}
+
+@media (max-width: 767px) {
+  .landing-area .content h2{
+    font-size: 55px;
+  }
+  .landing-area .content p{
+    font-size: 17px;
+  }
+  .landing-area .content button{
+    font-size: 22px;
+  }
+}
+
+/* Start Offer Area */
+.offers-area{
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 100px;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.offers-area h2{
+  width: fit-content;
+  margin: auto;
+  font-size: 50px;
+  font-weight: bolder;
+}
+.offers-area .offers{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px , 1fr));
+  gap: 30px;
+
+}
+.offers-area .offers .offer{
+  background-color: #171717;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  border: .2px solid #eeeeee38;
+  transition: .3s;
+  cursor: pointer;
+}
+.offers-area .offers .offer .emoji{
+  font-size: 30px;
+}
+.offers-area .offers .offer h3{
+  font-size: 28px;
+  font-weight: bold;
+  transition: .3s;
+}
+.offers-area .offers .offer p{
+  color: #a5a5a5;
+
+}
+.offers-area .offers .offer:hover{
+  background-color: #282828;
+  transform: translateY(-7px);
+}
+.offers-area .offers .offer:hover h3{
+  color: var(--mian-color);
+}
+
+/* Start Plans Area */
+.plans-area{
+  color: white;
+  margin-top: 130px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 12px;
+}
+.plans-area h2{
+    width: fit-content;
+  margin: auto;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.plans-area .plans-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.plans-area .plans-content .plan{
+  background-color: #171717;
+  padding-top: 15px;
+  padding-left: 25px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+  border: .2px solid #eeeeee38;
+  transition: .3s;
+  cursor: pointer;
+}
+.plans-area .plans-content .plan .plan-name{
+  font-weight: bold;
+  font-size: 35px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  text-transform: capitalize;
+  color: var(--mian-color);
+}
+
+.plans-area .plans-content .plan .price .pr{
+  font-size: 45px;
+  font-weight: bold;
+  color: #e5e5e5;
+}
+.plans-area .plans-content .plan .price .period{
+  color: #bbbbbb;
+  font-size: 15px;
+}
+.plans-area .plans-content .plan .features-plans{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.plans-area .plans-content .plan .features-plans ul{
+  padding: 0;
+}
+
+.plans-area .plans-content .plan .features-plans ul li{
+  text-decoration: none;
+  list-style: none;
+  display: block;
+  margin-top: 15px;
+  color: #e2e2e2;
+
+}
+.plans-area .plans-content .plan .features-plans ul li span{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.plans-area .plans-content .plan button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: .4s;
+  background-color: #303030;
+  color: white;
+
+}
+.plans-area .plans-content .plan button:hover{
+  background-color: #000000;
+}
+.plans-area .plans-content .plan:hover{
+  border-color: var(--mian-color);
+}
+.plans-area .plans-content .plan.active{
+  background-color: var(--mian-color);
+  color:  black !important;
+}
+.plans-area .plans-content .plan.active .plan-name{
+  color: black;
+}
+
+.plans-area .plans-content .plan.active .price .pr{
+  color: black;
+}
+.plans-area .plans-content .plan.active .price .period{
+  color: black;
+}
+
+.plans-area .plans-content .plan.active li span{
+  color: rgb(32, 32, 32);
+}
+
+.plans-area .plans-content .plan.active button{
+  color: var(--mian-color);
+  background-color: black;
+}
+.plans-area .plans-content .plan.active button:hover{
+  color: var(--mian-color);
+  background-color: rgb(46, 46, 46);
+}
+
+@media (max-width: 767px) {
+  .plans-area h2{
+    font-size: 40px;
+  }
+}
+/* End Plans Area */
+
+/* Start About Area */
+.about{
+  width: 100%;
+  background-color: #1010108c;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-top: 40px;
+
+}
+.about .container{
+  color: white;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about h2{
+  margin: auto;
+  font-size: 45px;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 39px;
+}
+.about p{
+  text-align: center;
+  color: #a4a4a4;
+  line-height: 1.8;
+  font-size: 18px;
+  font-weight: 500;
+}
+/* End About Area */
+/* Start Footer */
+footer{
+  padding: 10px;
+}
+footer .footer-content{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px , 1fr));
+  gap: 30px;
+  color: white;
+  border-top: 1px solid #4d4d4d;
+  border-bottom: .5px solid #4d4d4d;
+  border-radius: 5px;
+  padding-left: 15px ;
+  padding-right: 15px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+footer .footer-content h3{
+  font-size: 23px;
+  font-weight: bold;
+}
+footer .footer-content p{
+  font-size: 16px;
+  line-height: 1.8;
+  color: #a5a5a5;
+}
+footer .footer-content ul{
+  padding-left: 15px;
+}
+footer .footer-content ul li{
+  list-style: none;
+  margin-bottom: 10px;
+  color: #a4a4a4;
+}
+footer .info{
+  color: #717171;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 10px;
+  text-align: center;
+}
+/* End Footer */
